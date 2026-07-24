@@ -1,0 +1,12 @@
+# Fichiers compilés
+   out/
+   *.class
+
+   # Fichiers système
+   .DS_Store
+   Thumbs.db
+
+   # IDE
+   .idea/
+   .vscode/
+   *.iml
