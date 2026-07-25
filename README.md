@@ -17,10 +17,6 @@ de son hash MD5, selon deux stratégies au choix. L'objectif pédagogique du pro
 la performance du cassage mais la **conception orientée objet** : mettre en œuvre le patron
 *Simple Factory*, le polymorphisme et une architecture modulaire.
 
-> ⚠️ **Cadre d'utilisation.** Cet outil est un exercice académique destiné à tester vos
-> **propres** empreintes. Le cassage de mots de passe ne doit se faire que sur des systèmes
-> dont vous êtes responsable ou pour lesquels vous avez une autorisation explicite.
-
 ---
 
 ## 2. Présentation du problème
@@ -131,26 +127,6 @@ classDiagram
     HashCrackerFactory ..> HashCracker : crée
     HashCrackerFactory ..> DictionaryHashCracker : instancie
     HashCrackerFactory ..> BruteForceHashCracker : instancie
-```
-
-*Version texte (au cas où le rendu Mermaid ne s'affiche pas) :*
-
-```
-              «interface»
-              HashCracker
-              + crack(hash): String
-                    △
-                    ┆ implements
-            AbstractHashCracker  «abstract»
-            # md5(input): String
-            + getAttempts(): long
-                    △
-        ┌───────────┴───────────┐  extends
-DictionaryHashCracker   BruteForceHashCracker
- + crack(hash)            + crack(hash)
-
-HashCrackerFactory
- + create(method): HashCracker   ····> crée les stratégies
 ```
 
 ---
