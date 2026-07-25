@@ -72,8 +72,8 @@ src/cracker/
 | **`HashCrackerFactory`** | **Fabrique simple** : centralise la création des stratégies à partir d'une chaîne (`"BRUTE"` / `"DICO"`). Seul point du code qui utilise `new` sur les classes concrètes. |
 | **`Main`** | Application console : analyse les arguments `-m`/`-h`, délègue la création à la fabrique, mesure le temps et le nombre de tentatives, affiche le résultat. |
 
-> **Choix de conception.** L'énoncé impose l'interface `HashCracker` et les deux stratégies.
-> J'ai ajouté la classe abstraite `AbstractHashCracker` **entre** l'interface et les
+> **Choix de conception.** Dans le cahier de charge que vous nous aviez donné, l'interface `HashCracker` et les deux stratégies.
+> Nous avons ajouté la classe abstraite `AbstractHashCracker` **entre** l'interface et les
 > stratégies pour mutualiser le calcul MD5 (identique dans les deux stratégies) et le
 > compteur de tentatives. La fabrique continue de renvoyer le type `HashCracker`, l'énoncé
 > est donc respecté.
