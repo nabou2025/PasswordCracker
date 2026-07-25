@@ -35,16 +35,6 @@ passwordCracker -m BRUTE -h c47d187067c6cf953245f128b5fde62a
 passwordCracker -m DICO  -h 098f6bcd4621d373cade4e832627b4f6
 ```
 
-**Résultat attendu :**
-
-```
-Password found: test
-```
-ou
-```
-Password not found
-```
-
 Deux stratégies de recherche sont attendues :
 
 - **Dictionnaire** — pour chaque mot d'une liste : calculer son MD5, le comparer au hash
@@ -265,43 +255,3 @@ Abstract Factory, ou enregistrement dynamique des stratégies) — ce sera l'obj
 suivant.
 
 ---
-
-## Comment exécuter le projet
-
-### Prérequis
-- **JDK 11+** installé (`javac -version` doit répondre).
-
-### Compilation
-```bash
-javac -d out src/cracker/*.java
-```
-
-### Exécution
-```bash
-# via le lanceur (Linux/macOS) — compile automatiquement si besoin
-./passwordCracker -m DICO -h 098f6bcd4621d373cade4e832627b4f6
-
-# via le lanceur (Windows)
-passwordCracker.bat -m BRUTE -h c47d187067c6cf953245f128b5fde62a
-
-# ou directement en Java
-java -cp out cracker.Main -m DICO -h 098f6bcd4621d373cade4e832627b4f6
-```
-
-### Structure du dépôt
-```
-PasswordCracker/
-├── README.md
-├── passwordCracker         (lanceur Linux/macOS)
-├── passwordCracker.bat     (lanceur Windows)
-├── .gitignore
-├── resources/
-│   └── dictionary.txt
-└── src/cracker/
-    ├── HashCracker.java
-    ├── AbstractHashCracker.java
-    ├── DictionaryHashCracker.java
-    ├── BruteForceHashCracker.java
-    ├── HashCrackerFactory.java
-    └── Main.java
-```
