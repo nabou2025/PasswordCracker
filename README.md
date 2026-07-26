@@ -163,10 +163,9 @@ String result = cracker.crack(hash);                     // polymorphisme
 
 ## 6. Résultats obtenus
 
-> 🎥 **Vidéo de démonstration (≤ 10 min)** : _`<insérer ici le lien vers la vidéo>`_
+> 🎥 **Vidéo de démonstration (≤ 10 min)** : _`https://youtu.be/1HGSZ6bz7MY?si=Zkl0pn2ysHdYG05G`_
 
-Tests réalisés avec de **vrais** hash MD5 (rappel : le hash d'exemple du sujet
-`e7247759…` est fictif ; le vrai MD5 de `test` est `098f6bcd4621d373cade4e832627b4f6`).
+Tests réalisés avec de **vrais** hash MD5.
 
 | # | Commande | Résultat | Tentatives | Temps |
 |---|----------|----------|-----------:|------:|
